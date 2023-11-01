@@ -6,7 +6,7 @@
     justify-content: space-between;
     align-items: center;
     padding: 10px;
-    background-color: #282c34;
+    background-color: #011439;
 }
 
 .navbar-left,
@@ -16,7 +16,7 @@
 }
 
 .navbar a {
-    color: white;
+    color: rgb(242, 213, 171);
     text-decoration: none;
     margin: 0 10px;
     padding: 8px 16px;
@@ -25,16 +25,17 @@
 }
 
 .navbar a:hover {
-    background-color: #4b515a;
+    background-color: #55534f;
 }
 
 .navbar-center {
-    color: white;
+    color: rgb(216, 137, 89);
     font-size: 24px;
+    font-family: "Lucida Handwriting", "Courier New", monospace;
 }
 
 .logo img {
-    max-height: 40px;
+    max-height: 50px;
     width: auto;
     border-radius: 50%;
 }

@@ -1,0 +1,63 @@
+
+
+.home {
+    margin-right: 20px;
+    color: #011439;
+    font-weight: bold;
+  }
+
+  body {
+    background-color: #e4c7a5; /* Change this to your desired background color */
+  }
+ 
+
+  .text-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 180%;
+    margin: 10 auto; 
+    height: 100%;
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    color: #011439;
+    text-align: center;
+    font-size: 30px;
+    font-family: "Oswald", sans-serif;
+  }
+  .bold-heading{
+    font-size: 40px;
+    color: #924c02;
+    font-family: "Oswald", sans-serif;;
+  }
+  .text-overlay p {
+    margin: 0;
+    padding: 10px; /* Adjust padding as needed */
+  }
+
+  /* styles.css */
+.centered-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh; /* Center vertically in the viewport */
+  }
+  
+  .image-container {
+    text-align: center;
+  }
+  
+  .centered-image {
+    width: 200px; /* Adjust the width as needed */
+    height: auto; /* Maintain aspect ratio */
+  }
+  
+ 
+
+
+
+
+
+
