@@ -1,6 +1,6 @@
 // src/App.js
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import HomePage from './Components/HomePage';
+import HomePage from './Components/home';
 import LoginForm from './Components/LoginForm';
 import Register from './Components/Register';
 
