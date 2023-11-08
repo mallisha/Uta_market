@@ -18,8 +18,7 @@ const Sidebar = () => {
         <h2>Hello!</h2>
         <ul>
           <li>My Profile</li>
-          <li>Liked Products</li>
-          <li>Change Password</li>
+          <li>Edit Profile</li>
           <li>Logout</li>
         </ul>
       </div>
