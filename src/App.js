@@ -5,6 +5,8 @@ import LoginForm from './Components/LoginForm';
 import Register from './Components/Register';
 import Sellform from './Components/Sellform';
 import Dashboard from './Components/Dashboard';
+import ProfileEdit from './Components/ProfileEdit';
+import Myprofile from './Components/Myprofile';
 function App() {
     return (
         <Router>
@@ -14,9 +16,9 @@ function App() {
                     <Route path="/register" element={<Register />} />
                     <Route path="/sell" element={<Sellform />} />
                     <Route path="/dashboard" element={<Dashboard />} />
-
+                    <Route path="/profileedit" element={<ProfileEdit />} />
                     <Route path="/" exact element={<HomePage />} />
-
+                    <Route path="/Myprofile" element={<Myprofile />} />
                     {/* Add other routes as needed */}
                 </Routes>
                 

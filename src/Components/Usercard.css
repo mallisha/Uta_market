@@ -41,13 +41,13 @@
     font-size: 18px;
     cursor: pointer;
     padding: 10px;
-    color: #007bff;
+    color: #9aaec4;
     transition: background 0.3s, color 0.3s;
   }
   
   .drawer-button:hover {
     background: #f0f0f0;
-    color: #000;
+    color: rgb(13, 13, 13)020;
   }
   
   .drawer {
@@ -65,6 +65,6 @@
   .drawer:hover {
     transform: scale(1.05);
     box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
-    border: 1px solid #007bff;
+    border: 1px solid #a7c6e7;
   }
   

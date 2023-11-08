@@ -1,0 +1,38 @@
+/* ProfileView.css */
+
+
+  
+  .profile-card {
+    background-color: #fff;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    max-width: 400px;
+    margin: 0 auto;
+    padding: 20px;
+    align-items: center; 
+  }
+  
+  
+  .profile-header {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  
+  h2 {
+    color: #c1681f;
+    
+  }
+  
+  .info-item {
+    margin: 10px 0;
+    font-size: 16px;
+    color:#0563AF;
+  }
+  
+  strong {
+    font-weight: bold;
+  }
+  
+  /* Customize styles as needed for your design */
+  

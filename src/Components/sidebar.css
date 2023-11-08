@@ -33,11 +33,13 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+    color: white;
   }
   
   .sidebar-content h2 {
     font-size: 1.5rem;
     margin-bottom: 20px;
+    color: white;
   }
   
   .sidebar-content ul {
@@ -50,9 +52,31 @@
   .sidebar-content li {
     padding: 10px 0;
     cursor: pointer;
+    font-size: large;
   }
   
   .sidebar-content li:hover {
+    background-color: #0563AF;
+  }
+  .button-link {
+    text-decoration: none; /* Remove underlines from the Link */
+    margin:0; /* Make the link and button inline */
+    cursor: pointer;
+    font-size: large;
+    padding: 10px 0; /* Adjust padding for button size */
+    background: none;
+    border: none;
+    color: #ffffff; /* Set text color to blue */
+  }
+  
+  .button-link button {
+    background: none;
+    font-size: large;
+    border: none;
+    color: inherit; /* Inherit text color from the parent link */
+  }
+  
+  .button-link:hover {
     background-color: #0563AF;
   }
   
