@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import './LoginForm.css';
 import { Link } from 'react-router-dom';
+import loginbg from '../Images/loginbg.png';
 
 
 function LoginForm() {
@@ -15,6 +16,7 @@ function LoginForm() {
 
   return (
     <div className="login-form">
+
       <h2>Login</h2>
       <form onSubmit={handleSubmit}>
         <div>

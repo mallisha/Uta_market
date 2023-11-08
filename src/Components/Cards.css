@@ -1,0 +1,81 @@
+
+/* styles.css */
+
+/* ... (previous styles) */
+
+/* Container styles */
+.container {
+    display: flex;
+    height: 100vh; /* Make sure the container covers the full viewport height */
+  }
+  
+  /* Sidebar styles */
+  .sidebar {
+    width: 260px;
+    background-color: #2b2b2b;
+    color: white;
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    z-index: 1000;
+    transition: transform 0.3s;
+  }
+  
+  .sidebar.closed {
+    transform: translateX(-260px);
+  }
+  
+  /* Sidebar button styles */
+  .toggle-button {
+    background-color: #2b2b2b;
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+  }
+  
+  /* Sidebar content styles */
+  .sidebar-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .sidebar-content h2 {
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+  }
+  
+  .sidebar-content ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    text-align: center;
+  }
+  
+  .sidebar-content li {
+    padding: 10px 0;
+    cursor: pointer;
+  }
+  
+  .sidebar-content li:hover {
+    background-color: #444;
+  }
+  
+  /* Dashboard cards styles */
+  .dashboard-cards {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 20px;
+    transition: margin-left 0.3s; /* Transition margin for smoother animation */
+  }
+  
+  .dashboard-card {
+    flex: 1;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin: 0 10px 20px 0;
+  }

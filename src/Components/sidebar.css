@@ -1,0 +1,66 @@
+/* styles.css */
+
+/* ... (previous styles) */
+
+/* Sidebar styles */
+.sidebar {
+    width: 260px;
+    background-color: #c1681f;
+    color: white;
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%; /* Set sidebar height to 100% of the viewport */
+    z-index: 1000;
+    transition: transform 0.3s;
+  }
+  
+  .sidebar.closed {
+    transform: translateX(-260px);
+  }
+  
+  /* Sidebar button styles */
+  .toggle-button {
+    background-color: #c1681f;
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+  }
+  
+  /* Sidebar content styles */
+  .sidebar-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .sidebar-content h2 {
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+  }
+  
+  .sidebar-content ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    text-align: center;
+  }
+  
+  .sidebar-content li {
+    padding: 10px 0;
+    cursor: pointer;
+  }
+  
+  .sidebar-content li:hover {
+    background-color: #0563AF;
+  }
+  
+  /* Adjust main content area */
+  .main-content {
+    margin-left: 260px; /* Width of the sidebar */
+    padding: 20px;
+  }
+  
+  /* Additional styles can be added as needed */
+  

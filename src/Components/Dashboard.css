@@ -1,0 +1,71 @@
+/* Dashboard.css */
+
+/* Global styles */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+  }
+  
+  /* Dashboard styles */
+  .dashboard {
+    display: flex;
+  }
+  
+  /* Sidebar styles */
+  .sidebar {
+    width: 200px;
+    background-color: #444;
+    color: white;
+    padding: 20px;
+  }
+  
+  .sidebar-menu {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .sidebar-menu li {
+    margin-bottom: 10px;
+  }
+  
+  .sidebar-menu a {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    font-size: 18px;
+    transition: 0.3s;
+  }
+  .dashboard-cards {
+    display: flex;
+    flex-direction: column; /* Stack cards vertically */
+  }
+  .card-row {
+    display: flex;
+    justify-content: space-between; /* Arrange cards in a row with space in between */
+  }
+  
+  .sidebar-menu a:hover {
+    color: #ff9900;
+  }
+  
+  /* Main content styles */
+  .main-content {
+    flex: 1;
+    padding: 20px;
+    text-align: center;
+  }
+  
+  .header {
+    background-color: #333;
+    color: white;
+    padding: 10px;
+  }
+  
+  .content {
+    background-color: #f0f0f0;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+  

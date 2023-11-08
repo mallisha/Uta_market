@@ -6,7 +6,7 @@
     justify-content: space-between;
     align-items: center;
     padding: 10px;
-    background-color: #011439;
+    background-color: #0563AF;
 }
 
 .navbar-left,
@@ -28,11 +28,7 @@
     background-color: #55534f;
 }
 
-.navbar-center {
-    color: rgb(216, 137, 89);
-    font-size: 24px;
-    font-family: "Lucida Handwriting", "Courier New", monospace;
-}
+
 
 .logo img {
     max-height: 50px;
