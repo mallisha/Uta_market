@@ -1,70 +1,147 @@
 /* UserCard.css */
 
 .user-card {
-    display: flex;
-    justify-content: space-between;
-    padding: 20px;
-    background-color: #fff;
-    border: 1px solid #e4e4e4;
-    border-radius: 10px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-  }
-  
-  .user-card button {
-    background: none;
-    border: none;
-    font-size: 28px;
-    cursor: pointer;
-    padding: 10px;
-    color: #0d0d0d;
-  }
-  
-  .user-card button:hover {
-    text-decoration: underline;
-  }
-  
-  .drawer-list {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-  }
-  
-  .drawer-list li {
-    margin-top: 20px;
-  }
-  
-  .drawer-button {
-    display: flex;
-    align-items: center;
-    background: none;
-    border: none;
-    font-size: 18px;
-    cursor: pointer;
-    padding: 10px;
-    color: #007bff;
-    transition: background 0.3s, color 0.3s;
-  }
-  
-  .drawer-button:hover {
-    background: #f0f0f0;
-    color: #000;
-  }
-  
-  .drawer {
-    display: flex;
-    flex-direction: column;
-    background-color: #fff;
-    border: 1px solid #e4e4e4;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    padding: 20px;
-    width: 300px;
-    transition: all 0.3s;
-  }
-  
-  .drawer:hover {
-    transform: scale(1.05);
-    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
-    border: 1px solid #007bff;
-  }
-  
+  display: flex;
+  justify-content: space-between;
+  padding: 20px;
+  background-color: #fff;
+  border: 1px solid #e4e4e4;
+  border-radius: 10px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.user-card button {
+  background: none;
+  border: none;
+  font-size: 28px;
+  cursor: pointer;
+  padding: 10px;
+  color: #0d0d0d;
+}
+
+.user-card button:hover {
+  text-decoration: underline;
+}
+
+.drawer-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.drawer-list li {
+  margin-top: 20px;
+}
+
+.drawer-button {
+  display: flex;
+  align-items: center;
+  background: none;
+  border: none;
+  font-size: 18px;
+  cursor: pointer;
+  padding: 10px;
+  color: #007bff;
+  transition: background 0.3s, color 0.3s;
+}
+
+.drawer-button:hover {
+  background: #f0f0f0;
+  color: #000;
+}
+
+.drawer {
+  display: flex;
+  flex-direction: column;
+  background-color: #fff;
+  border: 1px solid #e4e4e4;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  padding: 20px;
+  width: 300px;
+  transition: all 0.3s;
+}
+
+.drawer:hover {
+  transform: scale(1.05);
+   border: 1px solid #007bff;
+}
+
+/* Orders table styles */
+
+.orders-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+th, td {
+  border: 1px solid #ddd;
+  padding: 5px;
+  text-align: left;
+}
+
+th {
+  background-color: #f2f2f2;
+  font-weight: bold;
+}
+
+.image-cell {
+  text-align: center;
+}
+
+.image-cell img {
+  width: 50px;
+  height: 50px;
+  object-fit: cover;
+}
+
+.actions-cell {
+  text-align: center;
+}
+
+.edit-button,
+.delete-button {
+  padding: 5px 10px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+}
+
+.edit-button:hover,
+.delete-button:hover {
+  background-color: #eee;
+}
+
+/* Edit order modal styles */
+
+.edit-order-modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 100;
+}
+
+.edit-order-modal h2 {
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+
+.edit-order-modal form {
+  width: 400px;
+  padding: 20px;
+  background-color: #fff;
+  border: 1px solid #e4e4e4;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.edit-order-modal label {
+  display: block;
+  margin-bottom: 5px
+}
