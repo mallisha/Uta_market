@@ -28,7 +28,7 @@ const Sellform = () => {
 
   return (
     <div className="reg-container">
-      <h2>Register</h2>
+      <h2>Sell Products</h2>
       <form onSubmit={handleSubmit}>
       <div>
             <label>First Name: </label>
@@ -63,13 +63,13 @@ const Sellform = () => {
         </div>
 
         <div>    
-            <label>Password: </label>
+            <label>Product Category: </label>
             <input
                 className="reg-input"  
-                type="password"
-                placeholder="********"
-                name="password"
-                value={form.password}
+                type="Prodct"
+                placeholder="Specify product category"
+                name="Product"
+                value={form.product}
                 onChange={handleInputChange}
             />
         </div>
