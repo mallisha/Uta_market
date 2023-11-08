@@ -19,7 +19,6 @@ const Sidebar = () => {
         <ul>
           <li>My Profile</li>
           <li>Edit Profile</li>
-          <li>Order History</li>
           <li>Logout</li>
         </ul>
       </div>
