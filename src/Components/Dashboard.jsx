@@ -1,39 +1,28 @@
 // Dashboard.js
 
 import React from 'react';
-import './Dashboard.css'; // Import the CSS file
+import './Dashboard.css';
 import Sidebar from './Sidebar';
 import Navbar from './Navbar';
-import Mypostscard from './Mypostscard'; // Create MyOrdersCard component
-import Myorderscard from './Myorderscard';
-import Editorders from './Editorders';
-import Editposts from './Editposts';
+import Usercard from './Usercard';
+import './Dashboard.css';
+
 const Dashboard = () => {
-    return (
-      <div>
-        <Navbar />
-        <div className="dashboard-content"> {/* Add CSS class for styling */}
-          <Sidebar />
-          <div className="main-content"> {/* Add CSS class for styling */}
-            <div className="user-dashboard"> {/* Add CSS class for styling */}
-              <h1>My Dashboard</h1>
-              <p>Welcome to UTA Market!</p>
-              {/* Add user-related content here */}
-              <div className="dashboard-cards">
-              <div className="card-row">
-                <Myorderscard />
-                <Mypostscard />
-              </div>
-              <div className="card-row">
-                <Editorders />
-                <Editposts />
-              </div>
-          </div>
-            </div>
+  return (
+    <div>
+      <Navbar />
+      <div className="dashboard-content">
+        <Sidebar />
+        <div className="main-content">
+          <div className="user-dashboard">
+            <h1>My Dashboard</h1>
+            <p>Welcome to UTA Market!</p>
+            <Usercard />
           </div>
         </div>
       </div>
-    );
-  };
-  
-  export default Dashboard;
+    </div>
+  );
+};
+
+export default Dashboard;

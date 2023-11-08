@@ -2,14 +2,14 @@
 
 import React from 'react';
 import './Usercard.css';
-const MyOrdersCard = () => {
+const ItemsboughtCard = () => {
   return (
     <div className="dashboard-card">
      
       {/* Display user's order information */}
-      <h2>Orders list</h2>
+      <h2>Items Purchased</h2>
     </div>
   );
 };
 
-export default MyOrdersCard;
+export default ItemsboughtCard;

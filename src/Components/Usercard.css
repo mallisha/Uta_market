@@ -1,0 +1,70 @@
+/* UserCard.css */
+
+.user-card {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+    background-color: #fff;
+    border: 1px solid #e4e4e4;
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  
+  .user-card button {
+    background: none;
+    border: none;
+    font-size: 28px;
+    cursor: pointer;
+    padding: 10px;
+    color: #0d0d0d;
+  }
+  
+  .user-card button:hover {
+    text-decoration: underline;
+  }
+  
+  .drawer-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  .drawer-list li {
+    margin-top: 20px;
+  }
+  
+  .drawer-button {
+    display: flex;
+    align-items: center;
+    background: none;
+    border: none;
+    font-size: 18px;
+    cursor: pointer;
+    padding: 10px;
+    color: #007bff;
+    transition: background 0.3s, color 0.3s;
+  }
+  
+  .drawer-button:hover {
+    background: #f0f0f0;
+    color: #000;
+  }
+  
+  .drawer {
+    display: flex;
+    flex-direction: column;
+    background-color: #fff;
+    border: 1px solid #e4e4e4;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    padding: 20px;
+    width: 300px;
+    transition: all 0.3s;
+  }
+  
+  .drawer:hover {
+    transform: scale(1.05);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+    border: 1px solid #007bff;
+  }
+  

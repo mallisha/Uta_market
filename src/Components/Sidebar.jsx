@@ -1,7 +1,7 @@
 // Sidebar.js
 
 import React, { useState } from 'react';
-
+import './sidebar.css';
 const Sidebar = () => {
   const [isSidebarOpen, setIsSidebarOpen] = useState(true);
 
@@ -18,8 +18,8 @@ const Sidebar = () => {
         <h2>Hello!</h2>
         <ul>
           <li>My Profile</li>
-          <li>Edit Profile</li>
-          <li>Order History</li>
+          <li>Liked Products</li>
+          <li>Change Password</li>
           <li>Logout</li>
         </ul>
       </div>
