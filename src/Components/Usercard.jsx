@@ -8,21 +8,22 @@ import Itemsboughtcard from './Itemsboughtcard';
 const UserCard = () => {
   const [isPostsOpen, setPostsOpen] = useState(false);
   const [isOrdersOpen, setOrdersOpen] = useState(false);
-  const [isitemsOpen, setitemsOpen] = useState(false);
+  const [isItemsOpen, setItemsOpen] = useState(false);
+
   const togglePostsDrawer = () => {
     setPostsOpen(!isPostsOpen);
     setOrdersOpen(false);
-    setitemsOpen(false);
+    setItemsOpen(false);
   };
 
   const toggleOrdersDrawer = () => {
     setOrdersOpen(!isOrdersOpen);
     setPostsOpen(false);
-    setitemsOpen(false);
+    setItemsOpen(false);
   };
 
-  const toggleitemsDrawer = () => {
-    setitemsOpen(!isitemsOpen);
+  const toggleItemsDrawer = () => {
+    setItemsOpen(!isItemsOpen);
     setPostsOpen(false);
     setOrdersOpen(false);
   };
@@ -39,8 +40,8 @@ const UserCard = () => {
           {isOrdersOpen && <Myorderscard />}
         </li>
         <li>
-          <button onClick={toggleitemsDrawer}>Items Purchased</button>
-          {isitemsOpen && <Itemsboughtcard />}
+          <button onClick={toggleItemsDrawer}>Items Purchased</button>
+          {isItemsOpen && <Itemsboughtcard />}
         </li>
       </ul>
     </div>
