@@ -1,37 +1,44 @@
+/* Myprofile.css */
 
+.profile-card {
+  border: 1px solid #ccc;
+  padding: 20px;
+  margin: 20px;
+  background-color: #f8f8f8;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  max-width: 400px;
+  margin: 0 auto;
+}
 
-  
-  .profile-card {
-    background-color: #fff;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
-    max-width: 400px;
-    margin: 0 auto;
-    padding: 20px;
-    align-items: center; 
-  }
-  
-  
-  .profile-header {
-    text-align: center;
-    margin-bottom: 20px;
-  }
-  
-  h2 {
-    color: #c1681f;
-    
-  }
-  
-  .info-item {
-    margin: 10px 0;
-    font-size: 16px;
-    color:#0563AF;
-  }
-  
-  strong {
-    font-weight: bold;
-  }
-  
-  /* Customize styles as needed for your design */
-  
+.profile-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.profile-header h2 {
+  margin: 0;
+}
+
+.profile-header button {
+  background-color: #0563AF;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  cursor: pointer;
+}
+
+.profile-header button:hover {
+  background-color: #045192;
+}
+
+.profile-info .info-item {
+  margin-bottom: 10px;
+}
+
+.profile-info strong {
+  font-weight: bold;
+}
+
+/* Additional styling for the Edit Profile form can be added in the ProfileEdit.css file */

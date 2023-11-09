@@ -4,35 +4,46 @@ import React from 'react';
 import './Usercard.css';
 import laptop from '../Images/laptop.jpeg'
 import book from '../Images/book.jpg'
-import posthistorycard from './posthistorycard';
-const posthistory = [
-    { 
-        id: 1, 
-        title: 'Laptop', 
-        price: 500, 
-        description: 'A great laptop for students.', 
-        type: 'Electronics',
-        image: laptop 
-    },
-    { 
-        id: 2, 
-        title: 'Calculus 101', 
-        price: 30, 
-        description: 'Calculus 101 textbook.', 
-        type: 'Books',
-        image: book
-    },
-    // ... add more items as necessary
+import './posthistorycard.css';
+
+const Posthistory = [
+  {
+    id: 1,
+    title: 'Laptop',
+    price: 500,
+    description: 'A great laptop for students.',
+    type: 'Electronics',
+    image: laptop, // Replace with the actual icon image URL
+  },
+  {
+    id: 2,
+    title: 'Calculus 101',
+    price: 30,
+    description: 'Calculus 101 textbook.',
+    type: 'Books',
+    image: book, // Replace with the actual icon image URL
+  },
+  // Add more items as necessary
 ];
 
 const MyPostsCard = () => {
-        
   return (
     <div className="dashboard-card">
-     
-      {/* Display user's posts or content information */}
-     <h2>Posts list</h2>
-     
+      
+      {/* Render My Posts using map */}
+      {Posthistory.map((post) => (
+        <div key={post.id} className="post-item">
+          <h3>{post.title}</h3>
+          <p>Price: ${post.price}</p>
+          <p>{post.description}</p>
+          <p>Type: {post.type}</p>
+          <img
+            src={post.image}
+            alt={post.title}
+            className="post-icon" // Add a class for styling the icon
+          />
+        </div>
+      ))}
     </div>
   );
 };
