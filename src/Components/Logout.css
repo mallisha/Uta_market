@@ -1,0 +1,22 @@
+/* logout.css */
+.logout-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh; /* Center content vertically in the viewport */
+    text-align: center;
+    background-color: #f5f5f5; /* Background color */
+  }
+  
+  .logout-container h2 {
+    font-size: 24px;
+    color: #333; /* Text color */
+    margin-bottom: 20px;
+  }
+  
+  .logout-container p {
+    font-size: 16px;
+    color: #666; /* Text color */
+  }
+  

@@ -11,7 +11,7 @@
     margin: 0;
     padding: 0;
     background-color: #ffffff;
-    overflow: hidden; /* Prevent scrolling */ /* Change this to your desired background color */
+    overflow: hidden; 
   }
  
 
@@ -21,10 +21,10 @@
     left: 0;
     width: 180%;
     margin-left: 40%;
-    margin-top: 10%;
+    margin-top: 15%;
     height: 50%;
     display: flex;
-    /* justify-content: center; */
+   
     align-items: flex-end;
     color: #011439;
     text-align: center;
@@ -51,34 +51,28 @@
   }
   .text-overlay p {
     margin: 0;
-    padding: 10px; /* Adjust padding as needed */
+    padding: 10px;
   }
 
-  /* styles.css */
+
+ 
 .centered-container {
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    height: 100vh; /* Center vertically in the viewport */
+    height: 100vh; 
   }
   
   .image-container {
     text-align: center;
-  }
-  
-  .centered-image {
-    width: 40px; /* Adjust the width as needed */
-    height: auto;
-    display: flex;
-    align-items: center ; 
-    margin-left: 20%; /* Maintain aspect ratio */
+  } 
+   .centered-image {
+   
+    position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
   }
   
  
-
-
-
-
-
-

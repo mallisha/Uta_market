@@ -1,6 +1,3 @@
-/* Dashboard.css */
-
-/* ...other styles... */
 
 .dashboard-content {
     display: flex;
@@ -12,11 +9,13 @@
   }
   
   .user-dashboard {
-    background-color: #f0f0f0;
+    background-color: #ededed;
+    color: #0563AF;
     padding: 20px;
     border-radius: 5px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
   }
-  
-  /* Additional styles can be added for your sidebar and navbar */
-  
+  .user-dashboard p{
+    color: black;
+  }
+ 
