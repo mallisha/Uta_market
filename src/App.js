@@ -10,6 +10,8 @@ import Myprofile from './Components/Myprofile';
 import Buy from './Components/HomePage';
 import Sellerinfo from './Components/Sellerinfo';
 import ItemList from './Components/Itemlist';
+import ChangePassword from './Components/changepassword';
+import Logout from './Components/Logout';
 function App() {
     return (
         <Router>
@@ -25,7 +27,8 @@ function App() {
                     <Route path="/Myprofile" element={<Myprofile />} />
                     <Route path="/" exact element={<ItemList />}/>
                     <Route path="/seller/:itemId" element={<Sellerinfo />} />
-
+                    <Route path="/changepassword" element={<ChangePassword />} />
+                    <Route path="/logout" element={<Logout />} />
                     {/* Add other routes as needed */}
                 </Routes>
                 
