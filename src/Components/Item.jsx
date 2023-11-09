@@ -1,5 +1,3 @@
-// src/components/Item.js
-
 import React from 'react';
 
 function Item({ title, price, description }) {

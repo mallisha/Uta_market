@@ -21,9 +21,7 @@ const Sidebar = () => {
        <li> <Link to="/Myprofile" className="button-link">
               <button>My Profile</button>
         </Link> </li>
-       <li> <Link to="/profileedit" className="button-link">
-              <button>Edit Profile</button>
-        </Link> </li>
+       <li> Change Password </li>
           <li>Logout</li>
         </ul>
         

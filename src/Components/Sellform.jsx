@@ -4,8 +4,8 @@ import { Link } from 'react-router-dom';
 
 const Sellform = () => {
   const [form, setForm] = useState({
-    email: "",
-    password: "",
+    email: "", 
+    productCategory: "Select..", // Default category
     address: "",
     pincode: "",
     number: "",
@@ -30,88 +30,95 @@ const Sellform = () => {
     <div className="reg-container">
       <h2>Sell Products</h2>
       <form onSubmit={handleSubmit}>
-      <div>
-            <label>First Name: </label>
-            <input
-                className="reg-input"
-                type="text"
-                placeholder="John"
-                name="fname"
-                value={form.address}
-                onChange={handleInputChange}
-            />
-            <label> Last Name: </label>
-            <input
-                className="reg-input"
-                type="text"
-                placeholder="Doe"
-                name="lname"
-                value={form.address}
-                onChange={handleInputChange}
-            />
-        </div>
         <div>
-            <label>Email: </label>
-            <input
-                className="reg-input"
-                type="email"
-                placeholder="@mavs.uta.edu"
-                name="email"
-                value={form.email}
-                onChange={handleInputChange}
-            />
+          <label>Email: </label>
+          <input
+            className="reg-input"
+            type="email"
+            placeholder="@mavs.uta.edu"
+            name="email"
+            value={form.email}
+            readOnly // Email field is read-only
+          />
         </div>
 
-        <div>    
-            <label>Product Category: </label>
-            <input
-                className="reg-input"  
-                type="Prodct"
-                placeholder="Specify product category"
-                name="Product"
-                value={form.product}
-                onChange={handleInputChange}
-            />
+        <div>
+          <label>Product Category: </label>
+          <select
+            className="reg-input"
+            name="productCategory"
+            value={form.productCategory}
+            onChange={handleInputChange}
+          >
+          <option value="Select">Select</option>
+            <option value="Electronics">Electronics</option>
+            <option value="Furniture">Furniture</option>
+            <option value="Books">Books</option>
+            <option value="Other">Other</option>
+          </select>
+        </div>
+
+        <div>
+          <label>Address: </label>
+          <input
+            className="reg-input"
+            type="text"
+            placeholder="Street name, Apt"
+            name="address"
+            value={form.address}
+            onChange={handleInputChange}
+          />
         </div>
         <div>
-            <label>Address: </label>
-            <input
-                className="reg-input"
-                type="text"
-                placeholder="Street name, Apt"
-                name="address"
-                value={form.address}
-                onChange={handleInputChange}
-            />
+          <label>Pincode: </label>
+          <input
+            className="reg-input"
+            type="text"
+            placeholder="00000"
+            name="pincode"
+            value={form.pincode}
+            onChange={handleInputChange}
+          />
         </div>
         <div>
-            <label>Pincode: </label>
-            <input
-                className="reg-input"
-                type="text"
-                placeholder="00000"
-                name="pincode"
-                value={form.pincode}
-                onChange={handleInputChange}
-            />
+          <label>Contact Number: </label>
+          <input
+            className="reg-input"
+            type="text"
+            placeholder="(999)-999-9999"
+            name="number"
+            value={form.number}
+            onChange={handleInputChange}
+            pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}"
+            required
+          />
         </div>
         <div>
-            <label>Conatct Number: </label>
-            <input
-                className="reg-input"
-                type="text"
-                placeholder="(999)-999-9999"
-                name="number"
-                value={form.number}
-                onChange={handleInputChange}
-                pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}"
-                required
-            />
+  <label>Price: </label>
+  <input
+    className="reg-input"
+    type="number" // Assuming the price is a number
+    placeholder="Enter the price"
+    name="price"
+    value={form.price}
+    onChange={handleInputChange}
+    required
+  />
+</div>
+        <div>
+          <label>Upload Image: </label>
+          <input
+            className="reg-input"
+            type="file"
+            name="image"
+            accept="image/*" // Limit file type to images
+            required
+          />
         </div>
         <button className="submit-button" type="submit">Submit</button>
       </form>
       <div className="login-link">
-       Already a member? <Link to="/login">Login here</Link>
+        Already a member? <Link to="/login">Login here</Link>
       </div>
     </div>
   );

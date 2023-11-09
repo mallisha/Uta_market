@@ -2,13 +2,14 @@
 
 import React, { useState } from 'react';
 import './ProfileEdit.css';
-const ProfileEdit = () => {
+
+const ProfileEdit = ({ userProfile, onCancel }) => {
   const [formData, setFormData] = useState({
-    firstName: '',
-    lastName: '',
-    email: '',
-    contact: '',
-    address: '',
+    firstName: userProfile.firstName,
+    lastName: userProfile.lastName,
+    email: userProfile.email, // Email field is read-only
+    contact: userProfile.contact,
+    address: userProfile.address,
   });
 
   const handleChange = (e) => {
@@ -19,6 +20,7 @@ const ProfileEdit = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
     // Handle the form submission, e.g., send data to the server
+    console.log(formData); // Display the updated form data in the console
   };
 
   return (
@@ -43,14 +45,16 @@ const ProfileEdit = () => {
           onChange={handleChange}
         />
 
-        <label htmlFor="email">Email:</label>
-        <input
-          type="email"
-          id="email"
-          name="email"
-          value={formData.email}
-          onChange={handleChange}
-        />
+        <div>
+          <label>Email:</label>
+          <input
+            type="email"
+            id="email"
+            name="email"
+            value={formData.email}
+            disabled // Make the email field read-only
+          />
+        </div>
 
         <label htmlFor="contact">Contact:</label>
         <input
@@ -69,7 +73,10 @@ const ProfileEdit = () => {
           onChange={handleChange}
         />
 
-        <button type="submit">Save Changes</button>
+        <div>
+          <button type="submit">Save Changes</button>
+          <button onClick={onCancel}>Cancel</button>
+        </div>
       </form>
     </div>
   );
