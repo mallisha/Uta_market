@@ -59,6 +59,9 @@ const Register = () => {
                 name="email"
                 value={form.email}
                 onChange={handleInputChange}
+                required
+                pattern="^[a-zA-Z0-9]+@[a-zA-Z0-9]+\.mavs\.[a-zA-z]+$"
+                title="Please enter a valid email with the domain @mavs.uta.edu"
             />
         </div>
 

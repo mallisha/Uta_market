@@ -12,7 +12,7 @@ function Navbar() {
             <div className="navbar-left">
                 <Logo />
                 <Link to="/login">Buy</Link>
-                <Link to="/sell">Sell</Link> 
+                <Link to="/login">Sell</Link> 
             </div>
 
 

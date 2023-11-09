@@ -1,5 +1,3 @@
-// Dashboard.js
-
 import React from 'react';
 import './Dashboard.css';
 import Sidebar from './Sidebar';
@@ -17,7 +15,7 @@ const Dashboard = () => {
      
           <div className="user-dashboard">
             <h1>My Dashboard</h1>
-            <p>Welcome to UTA Market!</p>
+            <p>Welcome to UTA Market! - Track your orders and posts here.</p>
             <Usercard />
           </div>
         </div>

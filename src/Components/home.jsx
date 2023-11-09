@@ -26,7 +26,7 @@ function Home() {
     <div className="App">
       <Navbar />
       <main>
-        <img src={homepagee} alt="My Image" style={{ width: '800px', height: '400px' }} className="centered-image" />
+        <img src={homepagee} alt="My Image" style={{ width: '700px', height: '400px' }} className="centered-image" />
         <div className="text-overlay">
           <span className="wavy-text">{characters}</span>
         </div>
