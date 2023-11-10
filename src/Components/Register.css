@@ -1,54 +1,64 @@
-/* Container styling */
+
 .reg-container {
     display: flex;
     flex-direction: column;
-    width: 700px;
-    margin: 120px auto;
-    padding: 10px;
+    width: 400px; 
+    margin: 80px auto; 
+    padding: 20px; 
     align-items: center; 
     border: 1px solid #ddd;
-    border-radius: 5px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-}
-
-/* Heading styling */
-.reg-container h2 {
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    background-color: #fff; 
+  }
+  
+  .reg-container h2 {
     margin-bottom: 20px;
+    font-size: 24px; 
     text-align: center;
-}
+    color: #cc771c; 
+  }
+  
+  label {
+    text-align: left; 
+    margin: 10px 0; 
+    font-weight: bold; 
+  }
 
-label {
-    text-align: center;
-    margin: 5px 0;
-
-}
-
-/* Input field styling */
-.reg-input {
+  .reg-input {
+    margin-bottom: 20px; 
     display: flex;
-    flex-direction: column;   /* Stack children vertically */
-    justify-content: center;  /* Center children vertically */
+    flex-direction: column;   
+    justify-content: center;  
     align-items: center; 
-    margin-bottom: 15px;
-}
-
-
-/* Submit button styling */
-.submit-button {
-    padding: 8px 15px;
+    
+  }
+  
+ 
+  .submit-button {
+    padding: 12px 20px; 
     background-color: #007BFF;
     color: white;
     border: none;
-    border-radius: 4px;
+    border-radius: 8px;
     cursor: pointer;
     transition: background-color 0.3s;
-}
-
-.submit-button:hover {
+  }
+  
+  .submit-button:hover {
     background-color: #0056b3;
-}
-.login-link {
+  }
+  
+  
+  .login-link {
     margin-top: 15px;
     text-align: center;
-}
-
+    color: #007BFF; /* Added a color for consistency */
+    text-decoration: underline; /* Underline the login link for emphasis */
+    cursor: pointer;
+  }
+  
+  .login-link:hover {
+    color: #0056b3;
+  }
+  

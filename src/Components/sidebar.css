@@ -1,11 +1,96 @@
-
+/* 
 .sidebar {
   width: 260px;
   height: 100%;
   position: fixed;
   top: 0;
   left: 0;
-  background-color: #2a2a2a; /* Dark background color */
+  background-color: #0563AF; 
+  color: #ffffff; 
+  box-shadow: 2px 0 10px rgba(0, 0, 0, 0.1); 
+  overflow-y: auto; 
+  transition: transform 0.3s, width 0.3s; 
+  z-index: 1; 
+}
+
+
+.sidebar.closed {
+  width: 60px; 
+  overflow-x: hidden; 
+}
+
+.sidebar-content h2{
+  color: #cc771c;
+}
+
+.sidebar-content {
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+}
+
+.toggle-button {
+  background-color: #0563AF; 
+  color: #ffffff;
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+  width: 100%; 
+  font-weight: bold;
+  border-radius: 0 5px 5px 0; 
+  transition: background-color 0.3s;
+}
+
+
+.toggle-button:hover {
+  background-color: #0563AF;
+}
+
+
+.sidebar-content h2 {
+  font-size: 1.5rem;
+  margin-bottom: 20px;
+}
+
+
+.sidebar-content ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  text-align: left;
+  flex-grow: 1; 
+}
+
+.sidebar-content li {
+  padding: 10px 0;
+  cursor: pointer;
+  font-size: 1.1rem;
+}
+
+
+.sidebar-content li:hover {
+  background-color: #0563AF; }
+
+
+.main-content {
+  margin-left: 260px; 
+  padding: 20px;
+  transition: margin-left 0.3s;
+}
+
+.sidebar.closed + .main-content {
+  margin-left: 90px; 
+} */
+
+
+/* Sidebar styling */
+.sidebar {
+  width: 260px;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: #034275; /* Dark background color */
   color: #ffffff; /* Text color */
   box-shadow: 2px 0 10px rgba(0, 0, 0, 0.1); /* Add shadow to the sidebar */
   overflow-y: auto; /* Add scroll for excess content */
@@ -19,17 +104,19 @@
   overflow-x: hidden; 
 }
 
+/* Sidebar content styling */
 .sidebar-content {
   padding: 20px;
   display: flex;
   flex-direction: column;
 }
 
+/* Toggle button styling */
 .toggle-button {
-  background-color: #0563AF; /* Professional accent color */
+  background-color: #034275; /* Professional accent color */
   color: #ffffff;
   border: none;
-  padding: 10px 20px;
+  padding: 10px;
   cursor: pointer;
   width: 100%; /* Make the button full width */
   font-weight: bold;
@@ -39,16 +126,17 @@
 
 /* Hover effect for the button */
 .toggle-button:hover {
-  background-color: #0563AF;
+  background-color: #034275; /* Darker shade on hover */
 }
 
-/* Sidebar title */
+/* Sidebar title styling */
 .sidebar-content h2 {
   font-size: 1.5rem;
   margin-bottom: 20px;
+  color: #cc771c; /* Accent color for the title */
 }
 
-/* Sidebar menu list */
+/* Sidebar menu list styling */
 .sidebar-content ul {
   list-style: none;
   padding: 0;
@@ -57,24 +145,27 @@
   flex-grow: 1; /* Grow to fill available space */
 }
 
+/* Sidebar menu item styling */
 .sidebar-content li {
   padding: 10px 0;
   cursor: pointer;
   font-size: 1.1rem;
+  color: #ffffff; /* Text color for menu items */
 }
 
 /* Hover effect for menu items */
 .sidebar-content li:hover {
-  background-color: #0a0a0a; /* Darker background on hover */
+  background-color: #034275; /* Darker background on hover */
 }
 
-/* Main content area */
+/* Main content area styling */
 .main-content {
   margin-left: 260px; /* Width of the sidebar when open */
   padding: 20px;
   transition: margin-left 0.3s; /* Smooth transition for margin */
 }
 
+/* Adjust the margin when the sidebar is closed */
 .sidebar.closed + .main-content {
-  margin-left: 60px; /* Adjust the margin when the sidebar is closed */
+  margin-left: 90px;
 }
