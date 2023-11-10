@@ -1,15 +1,16 @@
 /* UserCard.css */
 
 .user-card {
-
-    display: flex;
-    justify-content: space-between;
-    padding: 20px;
-    background-color: #fff;
-    border: 1px solid #e4e4e4;
-    border-radius: 10px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-  }
+  display: flex;
+  justify-content: space-between;
+  padding: 20px;
+  background-color: #fff;
+  border: 1px solid #e4e4e4;
+  border-radius: 10px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  overflow-y: auto; /* Add this to enable vertical scrolling */
+  max-height: 400px; /* Adjust the max height as needed */
+}
   
   .user-card button {
     background: none;

@@ -1,19 +1,37 @@
-import React, { useState } from 'react';
-import './LoginForm.css';
-import { Link } from 'react-router-dom';
+import React, { useState } from "react";
+import "./LoginForm.css";
+import { Link } from "react-router-dom";
+import { signInWithEmailAndPassword } from "firebase/auth";
+import { auth } from "../firebase";
+import { doc, getDoc } from "firebase/firestore";
+import { db } from "../firebase";
+import { useUser } from "../UserContext";
 
 function LoginForm() {
-  const [email, setEmail] = useState('');
-  const [password, setPassword] = useState('');
+  const { updateUser } = useUser();
 
-  const handleSubmit = (event) => {
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
+
+  const handleSubmit = async (event) => {
     event.preventDefault();
-    // You can handle login logic here using email and password state
-    console.log('Email:', email, 'Password:', password);
+    try {
+      const user = await signInWithEmailAndPassword(auth, email, password);
+      console.log(user);
+      const userDocRef = doc(db, "users", user.user.uid);
+      const docSnap = await getDoc(userDocRef);
+
+      if (docSnap.exists()) {
+        updateUser(docSnap.data());
+        console.log("Document data:", docSnap.data());
+      } else {
+        console.log("No such document!");
+      }
+    } catch (e) {
+      alert(e);
+    }
   };
   return (
-   
-    
     <div className="login-form">
       <h2>Login</h2>
       <form onSubmit={handleSubmit}>
@@ -26,7 +44,7 @@ function LoginForm() {
             required
           />
         </div>
-        <div> 
+        <div>
           <label>Password:</label>
           <input
             type="password"
@@ -36,7 +54,7 @@ function LoginForm() {
           />
         </div>
         <div className="login-actions">
-          <button  type="submit">Login</button>
+          <button type="submit">Login</button>
           <div className="forgot-password">
             <Link to="/ForgotPassword">Forgot password?</Link>
           </div>
@@ -46,7 +64,6 @@ function LoginForm() {
         New member? <Link to="/Register">Register here</Link>
       </div>
     </div>
-   
   );
 }
 

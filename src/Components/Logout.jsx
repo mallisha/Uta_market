@@ -1,12 +1,12 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
-
+import React from "react";
+import { Link } from "react-router-dom";
+import { useUser } from "../UserContext";
 
 function Logout() {
-  const handleLogout = () => {
-    // Perform the logout actions here.
-    // For example, you can clear user data, tokens, or perform any other actions needed for logout.
+  const { updateUser } = useUser();
 
+  const handleLogout = () => {
+    updateUser(null);
     window.location.href = "/login"; // Replace with your actual login page URL.
   };
 
