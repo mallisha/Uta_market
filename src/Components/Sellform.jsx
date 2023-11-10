@@ -1,12 +1,13 @@
 import "./Sellform.css";
 import React, { useState, useEffect } from "react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { useUser } from "../UserContext"; // Import useUser from your context
 import { collection, addDoc } from "firebase/firestore";
 import { db, storage } from "../firebase";
 
 const Sellform = () => {
   const { userData } = useUser(); // Use your user context hook
+  const navigate = useNavigate();
 
   const [form, setForm] = useState({
     productCategory: "Select..",
@@ -52,6 +53,7 @@ const Sellform = () => {
       });
 
       console.log("Document written with ID: ", docRef.id);
+      navigate("/dashboard");
     } catch (error) {
       console.error("Error adding document: ", error);
     }
@@ -164,15 +166,6 @@ const Sellform = () => {
         </div>
 
         {/* Display image link if image is uploaded */}
-        {form.image && (
-          <div>
-            <p>Image Link: {form.image.name}</p>
-            {/* If using Firebase Storage, display link to the uploaded image */}
-            {/* <p>
-              Image URL: {`${storage.ref().child(form.image.name).fullPath}`}
-            </p> */}
-          </div>
-        )}
 
         <div>
           <label>Product Description: </label>

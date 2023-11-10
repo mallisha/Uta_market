@@ -6,7 +6,7 @@ import {
   Navigate,
 } from "react-router-dom";
 import HomePage from "./Components/home";
-import Buy from "./Components/HomePage";
+import Buy from "./Components/Buy";
 import LoginForm from "./Components/LoginForm";
 import Register from "./Components/Register";
 import Sellform from "./Components/Sellform";
