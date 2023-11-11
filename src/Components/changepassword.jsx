@@ -1,4 +1,6 @@
 import React, { useState } from "react";
+import { doc, updateDoc } from "firebase/firestore";
+import { db } from "../firebase";
 import {
   auth,
   updatePassword,
@@ -32,6 +34,10 @@ function ChangePassword() {
 
             // Update the user's password
             await updatePassword(user, newPassword);
+
+            // Update the password in the user's document in Firestore
+            const userDocRef = doc(db, "users", user.uid);
+            await updateDoc(userDocRef, { password: newPassword });
 
             console.log("Password changed successfully");
             setCurrentPassword("");
