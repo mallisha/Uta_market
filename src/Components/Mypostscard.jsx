@@ -1,16 +1,33 @@
 import React, { useState, useEffect } from "react";
-import { collection, doc, getDocs, deleteDoc } from "firebase/firestore";
+import {
+  collection,
+  doc,
+  getDocs,
+  deleteDoc,
+  query,
+  where,
+} from "firebase/firestore";
 import { db } from "../firebase";
 import { Link } from "react-router-dom";
 import "./posthistorycard.css";
+import { useUser } from "../UserContext";
 
 const MyPostsCard = () => {
   const [postHistory, setPostHistory] = useState([]);
-
+  const { userData } = useUser();
   useEffect(() => {
     const fetchPosts = async () => {
       try {
-        const querySnapshot = await getDocs(collection(db, "posts"));
+        const postsCollection = collection(db, "posts");
+
+        // Create a query to find documents with the specified ID
+        const q = query(
+          postsCollection,
+          where("seller_uid", "==", userData.uid)
+        );
+        const querySnapshot = await getDocs(q);
+
+        // const querySnapshot = await getDocs(collection(db, "posts"));
         const postsData = querySnapshot.docs.map((doc) => ({
           id: doc.id,
           ...doc.data(),

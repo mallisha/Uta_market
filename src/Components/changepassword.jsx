@@ -1,33 +1,58 @@
-// ChangePassword.js
-import React, { useState } from 'react';
-import './ChangePassword.css';
+import React, { useState } from "react";
+import {
+  auth,
+  updatePassword,
+  reauthenticateWithCredential,
+  EmailAuthProvider,
+} from "../firebase";
+import { useUser } from "../UserContext"; // Import useUser from your UserContext file
+import "./ChangePassword.css";
 
 function ChangePassword() {
-  const [currentPassword, setCurrentPassword] = useState('');
-  const [newPassword, setNewPassword] = useState('');
-  const [confirmPassword, setConfirmPassword] = useState('');
+  const [currentPassword, setCurrentPassword] = useState("");
+  const [newPassword, setNewPassword] = useState("");
+  const [confirmPassword, setConfirmPassword] = useState("");
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
 
     if (currentPasswordIsCorrect()) {
       if (newPassword === confirmPassword) {
         if (isPasswordValid(newPassword)) {
-          // Password is valid, update the user's password here
-          console.log('Password changed successfully');
-          setCurrentPassword('');
-          setNewPassword('');
-          setConfirmPassword('');
+          try {
+            // Get the current user
+            const user = auth.currentUser;
+
+            // Prompt the user to re-enter their password for security
+            const credential = EmailAuthProvider.credential(
+              user.email,
+              currentPassword
+            );
+            await reauthenticateWithCredential(user, credential);
+
+            // Update the user's password
+            await updatePassword(user, newPassword);
+
+            console.log("Password changed successfully");
+            setCurrentPassword("");
+            setNewPassword("");
+            setConfirmPassword("");
+
+            // Add an alert for a successful password change
+            alert("Password changed successfully");
+          } catch (error) {
+            console.error("Error changing password:", error.message);
+          }
         } else {
           alert(
-            'Password must be at least 8 characters long and contain at least one number.'
+            "Password must be at least 8 characters long and contain at least one number."
           );
         }
       } else {
-        alert('New password and confirm password do not match');
+        alert("New password and confirm password do not match");
       }
     } else {
-      alert('Current password is incorrect');
+      alert("Current password is incorrect");
     }
   };
 

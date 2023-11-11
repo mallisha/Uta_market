@@ -17,6 +17,7 @@ import Sellerinfo from "./Components/Sellerinfo";
 import ItemList from "./Components/Itemlist";
 import ChangePassword from "./Components/changepassword";
 import Logout from "./Components/Logout";
+import PurchaseDetails from "./Components/PurchaseDetails";
 import { useUser } from "./UserContext";
 
 function App() {
@@ -42,8 +43,9 @@ function App() {
           <Route path="/" exact element={<HomePage />} />
           <Route path="/buy" exact element={<Buy />} />
           <Route path="/Myprofile" exact element={<Myprofile />} />
+          <Route path="/purchase/:purchaseId" element={<PurchaseDetails />} />
           <Route path="/" exact element={<ItemList />} />
-          <Route path="/seller/:itemId" exact element={<Sellerinfo />} />
+          <Route path="/seller/:productId" exact element={<Sellerinfo />} />
           <Route path="/changepassword" exact element={<ChangePassword />} />
           <Route path="/logout" exact element={<Logout />} />
           {/* Add other routes as needed */}

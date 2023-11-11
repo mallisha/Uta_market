@@ -49,6 +49,7 @@ const Sellform = () => {
       // Add a new document with the form data
       const docRef = await addDoc(postsCollection, {
         ...form,
+        seller_uid: userData.uid,
         // Add other fields if needed
       });
 

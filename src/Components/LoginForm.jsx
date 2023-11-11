@@ -22,7 +22,7 @@ function LoginForm() {
       const docSnap = await getDoc(userDocRef);
 
       if (docSnap.exists()) {
-        updateUser(docSnap.data());
+        updateUser({ ...docSnap.data(), uid: user.user.uid });
         console.log("Document data:", docSnap.data());
       } else {
         console.log("No such document!");
