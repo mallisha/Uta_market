@@ -160,12 +160,16 @@
 
 /* Main content area styling */
 .main-content {
-  margin-left: 260px; /* Width of the sidebar when open */
+  margin-left: 260px; 
   padding: 20px;
-  transition: margin-left 0.3s; /* Smooth transition for margin */
+  transition: margin-left 0.3s; 
 }
 
-/* Adjust the margin when the sidebar is closed */
+.sidebar.closed{
+  width: 10px;
+}
+
+
 .sidebar.closed + .main-content {
-  margin-left: 90px;
+  margin-left: 60px;
 }

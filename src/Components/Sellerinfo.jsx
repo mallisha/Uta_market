@@ -11,6 +11,7 @@ import {
 } from "firebase/firestore";
 import { db } from "../firebase";
 import { useUser } from "../UserContext";
+import "./Sellerinfo.css"
 
 const SellerInfo = () => {
   const { productId } = useParams(); // Using useParams hook to get the productId
