@@ -1,22 +1,62 @@
-/* logout.css */
+
+
+body {
+  font-family: 'Arial', sans-serif;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  align-items: flex-start; 
+  justify-content: center;
+  min-height: 100vh;
+  background-color: #f0f0f0; 
+}
+
 .logout-container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    height: 100vh; /* Center content vertically in the viewport */
-    text-align: center;
-    background-color: #f5f5f5; /* Background color */
-  }
-  
-  .logout-container h2 {
-    font-size: 24px;
-    color: #333; /* Text color */
-    margin-bottom: 20px;
-  }
-  
-  .logout-container p {
-    font-size: 16px;
-    color: #666; /* Text color */
-  }
-  
+  text-align: center;
+  background-color: #fff;
+  border: 1px solid #272626; 
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  padding: 40px;
+  max-width: 500px; 
+  width: 100%; 
+  margin-top: 10vh; 
+}
+
+.logout-container h2 {
+  font-size: 24px;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+.logout-container p {
+  font-size: 16px;
+  color: #666;
+  margin-bottom: 30px;
+}
+
+.logout-container button {
+  background-color: #ff5757;
+  color: #fff;
+  font-size: 18px;
+  padding: 12px 24px;
+  cursor: pointer;
+  border: none;
+  border-radius: 5px;
+  margin-bottom: 20px;
+  transition: background-color 0.3s ease;
+}
+
+.logout-container button:hover {
+  background-color: #e04141;
+}
+
+.logout-container a {
+  text-decoration: none;
+  color: #333;
+  font-size: 16px;
+}
+
+.logout-container a:hover {
+  text-decoration: underline;
+}
