@@ -16,6 +16,7 @@ import Myprofile from "./Components/Myprofile";
 import Sellerinfo from "./Components/Sellerinfo";
 import ItemList from "./Components/Itemlist";
 import ChangePassword from "./Components/changepassword";
+import ForgotPassword from "./Components/ForgotPassword";
 import Logout from "./Components/Logout";
 import PurchaseDetails from "./Components/PurchaseDetails";
 import { useUser } from "./UserContext";
@@ -47,6 +48,7 @@ function App() {
           <Route path="/" exact element={<ItemList />} />
           <Route path="/seller/:productId" exact element={<Sellerinfo />} />
           <Route path="/changepassword" exact element={<ChangePassword />} />
+          <Route path="/forgotpassword" exact element={<ForgotPassword />} />
           <Route path="/logout" exact element={<Logout />} />
           {/* Add other routes as needed */}
         </Routes>
