@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import './home.css';
-import homepagee from '../Images/utalogobg.png';
+import homepagee from '../Images/utalogobgr.png';
 import Navbar from './Navbar';
 
 function Home() {
