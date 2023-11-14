@@ -1,7 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import { useUser } from "../UserContext";
-
+import "./Logout.css";
 
 function Logout() {
   const { updateUser } = useUser();
@@ -12,7 +12,7 @@ function Logout() {
   };
 
   return (
-    <div>
+    <div className = "logout">
       <h2>Logout</h2>
       <p>Are you sure you want to logout?</p>
       <button onClick={handleLogout}>Logout</button>
