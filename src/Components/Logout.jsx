@@ -1,7 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import { useUser } from "../UserContext";
-import "./Logout.css";
+//import "./Logout.css";
 
 function Logout() {
   const { updateUser } = useUser();
